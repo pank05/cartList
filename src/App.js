@@ -1,6 +1,5 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Collapse from "./Collapse"
 import { useEffect, useState } from 'react';
 import CartSVG from'./cart.svg';
 
