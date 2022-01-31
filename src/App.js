@@ -8,7 +8,7 @@ function App() {
   const [showItems, setShowItems] = useState(true);
   const [productList, setProductList] = useState([]);
   const [isError, setIsError] = useState(false);
-  const [netValue, setNetValue] = useState(0)
+  const [netValue, setNetValue] = useState(0);
 
   useEffect(()=>{
     fetch('https://dnc0cmt2n557n.cloudfront.net/products.json').then(((res)=>{
@@ -69,7 +69,7 @@ function App() {
         <div className='total-cart-amt'>
           $ {netValue}
         </div>
-        <div>2 items <span className={`arrow-${showItems? 'down': 'right'}`}></span></div>
+        <div>{productList.length} items <span className={`arrow-${showItems? 'down': 'right'}`}></span></div>
         </div>
         <div className='cart-img-box' >
         <img  src={CartSVG}  className='cart-img' alt="cart"/>
