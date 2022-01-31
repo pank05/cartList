@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+.main-container{
+  padding: 20px 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cart-img{
+  width: 32px;
+  height: 32px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin: 24px 36px;
+  padding: 8px;
+  align-items: center;
+  text-align: right;
+  background-color: #f0f0f0;
+  color: grey
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-total-container{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 72px;
+  margin-bottom: 5px;
+  border-bottom: 8px solid #bebebe47;
+  align-items: flex-end;
+  text-align: right;
+  background-color: #f0f0f0;
+  color: grey
+}
+
+.card-iteam-container{
+  border: 2px solid #bcbcca;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row{
+  width: 90%;
+}
+
+.arrow-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #787070;
+}
+
+
+.arrow-right {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-left: 12px solid #787070;
+  border-bottom: 6px solid transparent;
+}
+
+.total-cart-amt{
+  margin-right: 28px;
+  font-size: 24px;
+    font-weight: 400;
+}
+.cart-total{
+  width: 96%;
+}
+.cart-img-box{
+  padding-right: 26px;
+}
+
+.item-img{
+  width: 15%;
+}
+.item-details{
+  padding-left: 16px;
+  width: 35%;
+  margin: 8px;
+  text-align: left;
+}
+
+.product-title{
+  font-size: 24px;
+  font-weight: 600;
+}
+.item-qty{
+  width: 30%;
+  
+}
+
+.item-cost{
+  width: 10%;
+}
+.product-img{
+  width: 140px;
+  height: 140px;
+}
+/* input */
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  border: 2px solid #ddd;
+  display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+  border-style: hidden;
+}
+
+.number-input button {
+  outline:none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 3rem;
+  height: 2rem;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  color: #787070;
 }
 
-.App-link {
-  color: #61dafb;
+
+button.minus::after {
+  content: '-';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  font-weight: 600;
+  font-size: 32px;
+
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.number-input button.plus:after {
+  content: '+';
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.number-input input[type=number] {
+  font-family: sans-serif;
+  max-width: 5rem;
+  padding: .5rem;
+  font-size: 1rem;
+  height: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid grey;
+  color: #787070;
 }
